@@ -1,0 +1,58 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/navbar.ejs %>
+<%- include ../../partials/sidebar.ejs %>
+
+<div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Jumbotron</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/jumbotron">Jumbotron</a></li>
+              <li class="breadcrumb-item active">Ubah</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Form ubah jumbotron "<%= jumbotron.title %>"</h3>
+              </div>
+
+              <form action="/jumbotron/edit/<%= jumbotron._id %>?_method=PUT" method="POST">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="title">Ubah title</label>
+                    <input type="text" value="<%= jumbotron.title %>" name="title" class="form-control" id="title" placeholder="Masukan nama kategori" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subTitle">Ubah sub title</label>
+                    <input type="text" value="<%= jumbotron.subTitle %>" name="subTitle" class="form-control" id="subTitle" placeholder="Masukan nama kategori" required/>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<%- include ../../partials/footer.ejs %>
+<%- include ../../partials/js.ejs %>

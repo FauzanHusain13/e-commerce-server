@@ -1,0 +1,31 @@
+<table id="example2" class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>Nama</th>
+    <th>Harga</th>
+    <th>Kategori</th>
+    <th>Akun</th>
+    <th>Aksi</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% for(let i = 0; i < cart.length; i++) { %>
+      <tr>
+        <td><%= i + 1 %></td>
+        <td><%= cart[i].name %></td>
+        <td><%= cart[i].price %></td>
+        <td><%= cart[i].category.name %></td>
+        <td><%= cart[i].user.username %> || <%= cart[i].user.email %></td>
+        <td>
+          <form action="/cart/delete/<%= cart[i]._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger btn-sm">
+              <i class="fas fa-trash"></i>
+              Hapus
+            </button>
+          </form>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

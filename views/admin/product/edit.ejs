@@ -1,0 +1,129 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/navbar.ejs %>
+<%- include ../../partials/sidebar.ejs %>
+
+<div class="content-wrapper">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Product</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/product">Product</a></li>
+              <li class="breadcrumb-item active">Ubah</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Form Ubah Kategori "<%= product.name %>"</h3>
+              </div>
+
+              <form action="/product/edit/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="name">Masukkan nama produk</label>
+                    <input type="text" name="name" value="<%= product.name %>" class="form-control" id="name" placeholder="Masukan nama produk" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="price">Masukkan harga produk</label>
+                    <input type="text" name="price" value="<%= product.price %>" class="form-control" id="price" placeholder="Masukan harga produk" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="category">Kategori</label>
+                    <select name="category" class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Pilih kategori</option>
+                      <% category.forEach(category => { %>
+                        <option value="<%= category._id %>"
+                            <% if(category._id.toString() === product?.category?._id.toString()) { %>
+                                selected
+                            <% } %>
+                        >
+                            <%= category.name %>
+                        </option>
+                      <% }) %>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="features">Masukan fitur produk</label>
+                    <input type="text" name="features" value="<%= product.features %>" class="form-control" id="features" placeholder="Masukan fitur produk" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="description">Masukkan deskripsi produk</label>
+                    <input type="text" name="description" value="<%= product.description %>" class="form-control" id="description" placeholder="Masukan harga produk" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="nameShop">Nama toko produk - 1</label>
+                    <input type="text" name="nameShop" value="<%= product.nameShop %>" class="form-control" id="nameShop" placeholder="Nama toko seperti shopee, tokopadia, dll" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="linkShop">Link produk - 1</label>
+                    <input type="text" name="linkShop" value="<%= product.linkShop %>" class="form-control" id="linkShop" placeholder="Link produk di shopee, tokopadia, dll" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="nameShop2">Nama toko produk - 2</label>
+                    <input type="text" name="nameShop2" value="<%= product.nameShop2 %>" class="form-control" id="nameShop2" placeholder="Nama toko seperti shopee, tokopadia, dll" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="linkShop2">Link produk - 2</label>
+                    <input type="text" name="linkShop2" value="<%= product.linkShop2 %>" class="form-control" id="linkShop2" placeholder="Link produk di shopee, tokopadia, dll" required/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="thumbnail">Gambar</label>
+                    <input type="file" name="thumbnail" value="" class="form-control" id="thumbnail" placeholder="Masukkan gambar produk" />
+                    <br>
+                    <img width="400" src="http://localhost:8000//uploads/<%= product.thumbnail %>" id="perview">
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<%- include ../../partials/footer.ejs %>
+<%- include ../../partials/js.ejs %>
+
+<script>
+  function readURL(input) {
+    if(input.files && input.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        $("#perview").attr("src", e.target.result)
+        $("#perview").attr("width", "20%")
+        $("#perview").attr("height", "20%")
+      }
+      reader.readAsDataURL(input.files[0])
+    }
+  }
+  $("#image").change(function(){
+    readURL(this);
+  })
+</script>

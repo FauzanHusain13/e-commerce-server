@@ -1,0 +1,33 @@
+<table id="example2" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>No.</th>
+      <th>Nama</th>
+      <th>Harga</th>
+      <th>Kategori</th>
+      <th>Aksi</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < product.length; i++) { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= product[i].name %></td>
+          <td><%= product[i].price %></td>
+          <td><%= product[i].category.name %></td>
+          <td>
+            <form action="/product/delete/<%= product[i]._id %>?_method=DELETE" method="POST">
+              <a href="/product/edit/<%= product[i]._id %>" class="btn btn-info btn-sm">
+                <i class="fas fa-pencil-alt"></i>
+                Ubah
+              </a>
+              <button class="btn btn-danger btn-sm">
+                <i class="fas fa-trash"></i>
+                Hapus
+              </button>
+            </form>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>

@@ -1,0 +1,29 @@
+<table id="example2" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>No.</th>
+      <th>paragraph-1</th>
+      <th>paragraph-2</th>
+      <th>paragraph-3</th>
+      <th>paragraph-4</th>
+      <th>Aksi</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < about.length; i++) { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= about[i].paragraph1 %></td>
+          <td><%= about[i].paragraph2 %></td>
+          <td><%= about[i].paragraph3 %></td>
+          <td><%= about[i].paragraph4 %></td>
+          <td>
+            <a href="/about/edit/<%= about[i]._id %>" class="btn btn-info btn-sm">
+              <i class="fas fa-pencil-alt"></i>
+              Ubah
+            </a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+</table>

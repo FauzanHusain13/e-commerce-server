@@ -1,0 +1,24 @@
+<table id="example2" class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>No.</th>
+      <th>Logo</th>
+      <th>Aksi</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < logo.length; i++) { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><img src="/uploads/<%= logo[i].logo %>" width="400" alt=""></td>
+          
+          <td>
+            <a href="/logo/edit/<%= logo[i]._id %>" class="btn btn-info btn-sm">
+              <i class="fas fa-pencil-alt"></i>
+              Ubah
+            </a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
