@@ -9,5 +9,5 @@ module.exports = {
     jwtKey: process.env.SECRET,
     email: process.env.AUTH_EMAIL,
     password: process.env.AUTH_PASSWORD,
-    rootPath: process.env.ROOT_PATH,
+    rootPath: path.resolve(__dirname, ".."),
 }
