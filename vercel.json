@@ -55,7 +55,7 @@
       "src": "./app/middleware/auth.js",
       "dest": [
         "./app/user/router.js",
-        "./app/auth/router.js"
+        "./app/cart/router.js"
       ]
     }
   ]
