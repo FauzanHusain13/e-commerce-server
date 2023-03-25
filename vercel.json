@@ -8,6 +8,42 @@
   ],
   "routes": [
     {
+      "src": "./app/admin/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/logo/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/dashboard/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/jumbotron/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/about/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/category/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/application/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/product/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/cart/router.js",
+      "dest": "./app.js"
+    },
+    {
       "src": "./app/user/router.js",
       "dest": "./app.js"
     },
