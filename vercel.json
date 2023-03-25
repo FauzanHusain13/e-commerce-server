@@ -50,6 +50,13 @@
     {
       "src": "./app/auth/router.js",
       "dest": "./app.js"
+    },
+    {
+      "src": "./app/middleware/auth.js",
+      "dest": [
+        "./app/user/router.js",
+        "./app/auth/router.js"
+      ]
     }
   ]
 }
