@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "description": "",
   "main": "app.js",
   "engines": {
