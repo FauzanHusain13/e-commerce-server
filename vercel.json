@@ -8,8 +8,14 @@
   ],
   "routes": [
     {
-      "src": "/api/v1/(.*)",
-      "dest": "/"
+      "src": "./app/user/router.js",
+      "methods": ["GET", "POST", "DELETE"],
+      "dest": "./app/user/controller.js"
+    },
+    {
+      "src": "./app/auth/router.js",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "dest": "./app/auth/controller.js"
     }
   ]
 }
