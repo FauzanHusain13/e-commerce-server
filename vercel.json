@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": ".",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "./app/admin/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/logo/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/dashboard/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/jumbotron/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/about/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/category/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/application/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/product/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/cart/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/user/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/auth/router.js",
+      "dest": "./app.js"
+    },
+    {
+      "src": "./app/middleware/auth.js",
+      "dest": [
+        "./app/user/router.js",
+        "./app/cart/router.js"
+      ]
+    },
+    {
+      "src": "/dashboard",
+      "dest": "./views/admin/dashboard/view_dashboard.ejs"
+    },
+    {
+      "src": "/sign-in",
+      "dest": "./views/admin/admin/view_signin.ejs"
+    },
+    {
+      "src": "/about",
+      "dest": "./views/admin/about/view_about.ejs"
+    },
+    {
+      "src": "/application",
+      "dest": "./views/admin/application/view_application.ejs"
+    },
+    {
+      "src": "/cart",
+      "dest": "./views/admin/cart/view_cart.ejs"
+    },
+    {
+      "src": "/category",
+      "dest": "./views/admin/category/view_category.ejs"
+    },
+    {
+      "src": "/jumbotron",
+      "dest": "./views/admin/jumbotron/view_jumbotron.ejs"
+    },
+    {
+      "src": "/logo",
+      "dest": "./views/admin/logo/view_logo.ejs"
+    },
+    {
+      "src": "/product",
+      "dest": "./views/admin/product/view_product.ejs"
+    }
+  ]
+}
