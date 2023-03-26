@@ -53,10 +53,7 @@
     },
     {
       "src": "./app/middleware/auth.js",
-      "dest": [
-        "./app/user/router.js",
-        "./app/cart/router.js"
-      ]
+      "dest": "./app.js"
     },
     {
       "src": "/dashboard",
