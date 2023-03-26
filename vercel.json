@@ -8,54 +8,6 @@
   ],
   "routes": [
     {
-      "src": "./app/admin/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/logo/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/dashboard/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/jumbotron/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/about/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/category/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/application/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/product/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/cart/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/user/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/auth/router.js",
-      "dest": "./app.js"
-    },
-    {
-      "src": "./app/middleware/auth.js",
-      "dest": "./app.js"
-    },
-    {
       "src": "/dashboard",
       "dest": "./views/admin/dashboard/view_dashboard.ejs"
     },
@@ -90,6 +42,10 @@
     {
       "src": "/product",
       "dest": "./views/admin/product/view_product.ejs"
+    },
+    {
+      "src": "/api/v1/users/landingPage",
+      "dest": "./app/user/router.js"
     }
   ]
 }
