@@ -7,9 +7,14 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+     { "src": "/(.*)", "dest": "/" },
+     { "src": "/dashboard", "dest": "/api/dashboard" },
+     { "src": "/about", "dest": "/api/about" },
+     { "src": "/logo", "dest": "/api/logo" },
+     { "src": "/jumbotron", "dest": "/api/jumbotron" },
+     { "src": "/category", "dest": "/api/category" },
+     { "src": "/application", "dest": "/api/application" },
+     { "src": "/product", "dest": "/api/product" },
+     { "src": "/cart", "dest": "/api/cart" }
   ]
 }
