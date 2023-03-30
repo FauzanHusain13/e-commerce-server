@@ -2,19 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./app.js",
+      "src": "*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
-     { "src": "/(.*)", "dest": "/" },
-     { "src": "/dashboard", "dest": "/api/dashboard/router.js" },
-     { "src": "/about", "dest": "/api/about/router.js" },
-     { "src": "/logo", "dest": "/api/logo/router.js" },
-     { "src": "/jumbotron", "dest": "/api/jumbotron/router.js" },
-     { "src": "/category", "dest": "/api/category/router.js" },
-     { "src": "/application", "dest": "/api/application/router.js" },
-     { "src": "/product", "dest": "/api/product/router.js" },
-     { "src": "/cart", "dest": "/api/cart/router.js" }
+     { 
+      "src": "/(.*)", 
+      "dest": "/" 
+     }
   ]
 }
