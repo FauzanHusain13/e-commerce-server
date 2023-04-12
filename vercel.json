@@ -15,7 +15,9 @@
       "src": "/app/dashboard/router",
       "dest": "/dashboard"
      },
-     
-
+     {
+      "src": "/app/about/router",
+      "dest": "/about"
+     }
   ]
 }
