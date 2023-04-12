@@ -18,6 +18,17 @@
      {
       "src": "/app/about/router",
       "dest": "/about"
+     },
+     {
+      "src": "/app/logo/router",
+      "dest": "/logo"
+     },
+     {
+      "src": "/app/jumbutron/router",
+      "dest": "/jumbotron"
+     },
+     {
+      ""
      }
   ]
 }
