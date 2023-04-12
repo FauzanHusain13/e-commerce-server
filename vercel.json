@@ -8,8 +8,14 @@
   ],
   "routes": [
      { 
-      "src": "/(.*)", 
+      "src": "/app/admin/router", 
       "dest": "/" 
-     }
+     },
+     {
+      "src": "/app/dashboard/router",
+      "dest": "/dashboard"
+     },
+     
+
   ]
 }
